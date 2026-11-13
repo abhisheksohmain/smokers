@@ -1,4 +1,236 @@
-.review { margin: 0; padding: 32px 28px; }
-.review__stars { color: var(--ember); letter-spacing: 4px; font-size: 1.1rem; margin-bottom: 14px; }
-.review p { color: var(--sand); font-size: 1.05rem; }
-.review cite { color: var(--copper); font-style: normal; font-size: .9rem; }
+
+/* =========================================
+   SMOKE HAUZ - INFINITE REVIEWS
+========================================= */
+
+.reviews {
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews .section-head {
+  margin-bottom: 38px;
+}
+
+.reviews .section-head p {
+  color: var(--sand);
+  max-width: 580px;
+  margin: 12px auto 0;
+}
+
+/* SLIDER */
+
+.reviews__slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 22px;
+  padding: 8px 0;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 5%,
+    #000 95%,
+    transparent
+  );
+}
+
+/* TRACK */
+
+.reviews__track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: reviewRight 36s linear infinite;
+  will-change: transform;
+}
+
+.reviews__slider--left .reviews__track {
+  animation-name: reviewLeft;
+  animation-duration: 40s;
+}
+
+/* PAUSE ON HOVER */
+
+.reviews__slider:hover .reviews__track {
+  animation-play-state: paused;
+}
+
+/* CARD */
+
+.review {
+  margin: 0;
+  padding: 25px 26px;
+
+  flex: 0 0 340px;
+  width: 340px;
+  min-height: 205px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 18px;
+  background: var(--card, #211d1a);
+  border: 1px solid rgba(255, 255, 255, .10);
+
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+  border-color: var(--copper);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .22);
+}
+
+/* CLIENT */
+
+.review__client {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 15px;
+}
+
+.review__avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--copper);
+  background: #29211d;
+}
+
+.review__client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review cite {
+  color: var(--copper);
+  font-style: normal;
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.review__verified {
+  color: var(--sand);
+  opacity: .75;
+  font-size: .75rem;
+}
+
+.review__verified span {
+  color: #6cc995;
+  margin-right: 3px;
+}
+
+/* STARS */
+
+.review__stars {
+  color: var(--ember);
+  letter-spacing: 4px;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+
+.review p {
+  color: var(--sand);
+  font-size: .95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* INFINITE ANIMATION */
+
+/* Top: left to right */
+@keyframes reviewRight {
+  from {
+    transform: translateX(-25%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Bottom: right to left */
+@keyframes reviewLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .reviews .section-head {
+    margin-bottom: 25px;
+  }
+
+  .reviews__track {
+    gap: 15px;
+    animation-duration: 30s;
+  }
+
+  .reviews__slider--left .reviews__track {
+    animation-duration: 34s;
+  }
+
+  .review {
+    flex-basis: 290px;
+    width: 290px;
+    min-height: 190px;
+    padding: 22px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .reviews__slider {
+    margin-bottom: 12px;
+  }
+
+  .review {
+    flex-basis: 270px;
+    width: 270px;
+    padding: 20px;
+  }
+
+  .review__avatar {
+    width: 47px;
+    height: 47px;
+  }
+
+  .review p {
+    font-size: .9rem;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews__track {
+    animation: none;
+  }
+}
