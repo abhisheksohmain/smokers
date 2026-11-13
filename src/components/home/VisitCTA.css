@@ -1,0 +1,5 @@
+.visit__grid { display: grid; grid-template-columns: .8fr 1fr; gap: 64px; align-items: center; }
+.visit__img { width: 100%; max-width: 420px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 24px; border: 1px solid var(--copper); margin-inline: auto; }
+.visit__addr { color: var(--sand); }
+.visit__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px; }
+@media (max-width: 860px) { .visit__grid { grid-template-columns: 1fr; gap: 36px; } }

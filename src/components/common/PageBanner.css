@@ -1,0 +1,5 @@
+.page-banner { position: relative; min-height: 56vh; display: flex; align-items: flex-end; padding: 160px 0 70px; background-size: cover; background-position: center; overflow: hidden; }
+.page-banner__inner { position: relative; z-index: 2; max-width: 760px; margin-left: max(4vw, calc((100vw - 1180px) / 2)); margin-right: auto; width: auto; }
+.page-banner p { font-size: 1.15rem; max-width: 560px; }
+.page-banner__smoke { position: absolute; inset: auto -10% -40% -10%; height: 70%; background: radial-gradient(ellipse at 30% 60%, rgba(241,226,211,.16), transparent 60%), radial-gradient(ellipse at 75% 70%, rgba(201,130,91,.2), transparent 60%); filter: blur(30px); animation: banner-drift 14s ease-in-out infinite alternate; }
+@keyframes banner-drift { to { transform: translateX(6%) translateY(-6%); } }

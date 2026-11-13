@@ -1,0 +1,6 @@
+.flavour { padding: 28px 24px; border-top: 3px solid var(--tone); }
+.flavour__dot { display: block; width: 46px; height: 46px; border-radius: 50%; margin-bottom: 18px; background: radial-gradient(circle at 30% 30%, #fff8, var(--tone)); box-shadow: 0 0 26px var(--tone); transition: transform .5s ease; }
+.flavour:hover .flavour__dot { transform: scale(1.2) rotate(20deg); }
+.flavour ul { list-style: none; margin: 0; padding: 0; }
+.flavour li { padding: 8px 0; border-bottom: 1px dashed var(--line); color: var(--sand); }
+.flavour li:last-child { border: 0; }

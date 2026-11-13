@@ -1,0 +1,9 @@
+.ambience__mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 240px; gap: 18px; }
+.ambience__tile { margin: 0; border-radius: var(--radius); border: 1px solid var(--line); cursor: pointer; }
+.ambience__tile.big { grid-column: span 2; grid-row: span 2; }
+.ambience__tile.tall { grid-row: span 2; }
+.ambience__tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s ease; }
+.ambience__tile:hover img { transform: scale(1.08); }
+.ambience__tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 16px; background: linear-gradient(0deg, rgba(11,9,8,.9), transparent); z-index: 2; font-family: var(--font-head); font-size: 1.1rem; }
+@media (max-width: 900px) { .ambience__mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; } .ambience__tile.big { grid-column: span 2; } }
+@media (max-width: 520px) { .ambience__mosaic { grid-template-columns: 1fr; } .ambience__tile.big, .ambience__tile.tall { grid-column: auto; grid-row: span 1; } }

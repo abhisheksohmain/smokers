@@ -1,0 +1,7 @@
+.experience { display: flex; flex-direction: column; overflow: hidden; }
+.experience__img { aspect-ratio: 4 / 3; overflow: hidden; }
+.experience__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.experience:hover .experience__img img { transform: scale(1.1); }
+.experience__body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.experience__who { margin-top: auto; color: var(--copper); font-size: .9rem; font-weight: 600; }
+.experiences__more { text-align: center; margin-top: 44px; }

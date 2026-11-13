@@ -1,0 +1,7 @@
+.lounge-feat__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.lounge-feat__list { list-style: none; padding: 0; margin: 24px 0 0; }
+.lounge-feat__list li { padding: 14px 0 14px 34px; position: relative; border-bottom: 1px solid var(--line); color: var(--sand); transition: padding .3s ease, color .3s ease; }
+.lounge-feat__list li::before { content: ''; position: absolute; left: 0; top: 50%; width: 14px; height: 14px; transform: translateY(-50%) rotate(45deg); background: var(--grad-copper); }
+.lounge-feat__list li:hover { padding-left: 44px; color: var(--rose); }
+.lounge-feat__media img { width: 100%; max-height: 640px; object-fit: cover; border-radius: 24px; border: 1px solid var(--copper); }
+@media (max-width: 860px) { .lounge-feat__grid { grid-template-columns: 1fr; } }

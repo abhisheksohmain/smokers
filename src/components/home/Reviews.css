@@ -1,0 +1,4 @@
+.review { margin: 0; padding: 32px 28px; }
+.review__stars { color: var(--ember); letter-spacing: 4px; font-size: 1.1rem; margin-bottom: 14px; }
+.review p { color: var(--sand); font-size: 1.05rem; }
+.review cite { color: var(--copper); font-style: normal; font-size: .9rem; }

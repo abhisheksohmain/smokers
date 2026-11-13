@@ -1,0 +1,12 @@
+.gallery-grid__filters { display: flex; gap: 12px; justify-content: center; margin-bottom: 36px; }
+.gallery-grid__filter { padding: 10px 26px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--sand); cursor: pointer; font: 500 1rem var(--font-body); transition: all .3s ease; }
+.gallery-grid__filter.is-active, .gallery-grid__filter:hover { background: var(--grad-copper); color: #1a0f08; border-color: transparent; }
+.gallery-grid__masonry { columns: 3 280px; column-gap: 18px; }
+.gallery-grid__item { display: block; width: 100%; padding: 0; margin: 0 0 18px; border: 1px solid var(--line); border-radius: var(--radius); cursor: zoom-in; background: none; break-inside: avoid; transition: transform .4s ease, border-color .4s ease; }
+.gallery-grid__item:hover { transform: translateY(-6px); border-color: var(--copper); }
+.gallery-grid__item img { width: 100%; height: auto; transition: transform .8s ease; }
+.gallery-grid__item:hover img { transform: scale(1.06); }
+.gallery-grid__lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(5,4,3,.94); display: grid; place-items: center; padding: 24px; cursor: zoom-out; animation: lb-in .3s ease; }
+.gallery-grid__lightbox img { max-height: 90vh; max-width: 92vw; border-radius: 14px; border: 1px solid var(--copper); }
+.gallery-grid__close { position: absolute; top: 18px; right: 24px; font-size: 2.6rem; line-height: 1; background: none; border: 0; color: var(--rose); cursor: pointer; }
+@keyframes lb-in { from { opacity: 0; } }

@@ -1,0 +1,4 @@
+.promise__box { padding: clamp(36px, 6vw, 80px); text-align: center; }
+.promise__quote { font: 400 clamp(1.8rem, 4vw, 3rem)/1.25 var(--font-head); max-width: 800px; margin: 0 auto 20px; }
+.promise__box p:last-child { max-width: 560px; margin-inline: auto; }
+.promise__box:hover { transform: none; }
