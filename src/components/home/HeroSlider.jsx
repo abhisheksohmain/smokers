@@ -1,3 +1,7 @@
+ 
+
+
+ 
 
 import { useState, useEffect, useCallback } from 'react';
 import { images } from '../../data/siteData.js';
@@ -79,3 +83,4 @@ export default function HeroSlider() {
     </section>
   );
 }
+

@@ -1,37 +1,10 @@
-
 /* =========================================
-   THE SMOKE HAUZ
-   FULL SCREEN HERO IMAGE SLIDER
-   FULL COVER + AUTO SLIDE + ARROWS
+   THE SMOKE HAUZ — HERO SLIDER (CLEAN)
+   Desktop = same as before
+   Mobile  = full screen cover
 ========================================= */
 
-/* MAIN HERO */
-.hero {
-  position: relative;
-
-  width: 100vw;
-  max-width: none;
-
-  /* Break out of centered page container */
-  left: 50%;
-  margin-left: -50vw;
-
-  height: 100vh;
-  height: 100svh;
-
-  min-height: 500px;
-
-  overflow: hidden;
-  isolation: isolate;
-
-  background: #080604;
-}
-
-
-/* =========================================
-   HERO SLIDER — NO IMAGE CROPPING
-========================================= */
-
+/* ---------- HERO ---------- */
 .hero {
   position: relative;
   width: 100vw;
@@ -41,19 +14,17 @@
 
   height: 100vh;
   height: 100svh;
-
   min-height: 450px;
+
   overflow: hidden;
   isolation: isolate;
-
   background: #080604;
 }
 
-/* SLIDES */
+/* ---------- SLIDES ---------- */
 .hero__slide {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
 
@@ -61,130 +32,36 @@
   visibility: hidden;
   pointer-events: none;
 
-  transition:
-    opacity 1s ease,
-    visibility 1s ease;
+  transition: opacity 1s ease, visibility 1s ease;
 }
 
 .hero__slide.is-active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-
   z-index: 1;
 }
 
-/* COMPLETE IMAGE — NO CROPPING */
+/* ---------- IMAGE (desktop: poori image, no crop) ---------- */
 .hero__bg {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
 
-  background-size: contain !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 
-  transform: none !important;
-  transition: none !important;
+  transform: none;
+  transition: none;
 }
 
-/* SLIDER ARROWS */
+/* ---------- ARROWS ---------- */
 .hero__arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-
   z-index: 10;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 52px;
-  height: 52px;
-
-  border: 1px solid rgba(255,255,255,0.55);
-  border-radius: 50%;
-
-  background: rgba(15,12,10,0.5);
-  color: #fff;
-
-  font-size: 21px;
-  cursor: pointer;
-
-  backdrop-filter: blur(8px);
-
-  transition: 0.3s ease;
-}
-
-.hero__arrow:hover {
-  background: #bd7956;
-  border-color: #bd7956;
-}
-
-.hero__arrow--prev {
-  left: 25px;
-}
-
-.hero__arrow--next {
-  right: 25px;
-}
-
-/* TABLET */
-@media (max-width: 1024px) {
-  .hero__arrow {
-    width: 44px;
-    height: 44px;
-  }
-
-  .hero__arrow--prev {
-    left: 15px;
-  }
-
-  .hero__arrow--next {
-    right: 15px;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 640px) {
-  .hero {
-    height: 100svh;
-    min-height: 450px;
-  }
-
-  .hero__bg {
-    background-size: contain !important;
-  }
-
-  .hero__arrow {
-    width: 38px;
-    height: 38px;
-    font-size: 16px;
-  }
-
-  .hero__arrow--prev {
-    left: 10px;
-  }
-
-  .hero__arrow--next {
-    right: 10px;
-  }
-}
-
-
-/* =========================================
-   SLIDER ARROWS
-========================================= */
-
-.hero__arrow {
-  position: absolute;
-  top: 50%;
-
-  z-index: 10;
-
   transform: translateY(-50%);
 
   display: flex;
@@ -193,71 +70,47 @@
 
   width: 54px;
   height: 54px;
-
   padding: 0;
 
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 50%;
-
   background: rgba(15, 12, 10, 0.45);
-
-  color: #ffffff;
+  color: #fff;
 
   font-size: 21px;
   line-height: 1;
-
   cursor: pointer;
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-/* LEFT ARROW */
-.hero__arrow--prev {
-  left: 28px;
-}
+.hero__arrow--prev { left: 28px; }
+.hero__arrow--next { right: 28px; }
 
-/* RIGHT ARROW */
-.hero__arrow--next {
-  right: 28px;
-}
-
-/* HOVER EFFECT */
 .hero__arrow:hover {
   background: #bd7956;
   border-color: #bd7956;
-
   transform: translateY(-50%) scale(1.1);
 }
 
-/* CLICK EFFECT */
 .hero__arrow:active {
   transform: translateY(-50%) scale(0.95);
 }
 
-/* KEYBOARD ACCESSIBILITY */
 .hero__arrow:focus-visible {
-  outline: 3px solid #ffffff;
+  outline: 3px solid #fff;
   outline-offset: 4px;
 }
 
 /* =========================================
-   TABLET RESPONSIVE
+   TABLET (641px – 1024px)
 ========================================= */
-
 @media (min-width: 641px) and (max-width: 1024px) {
-
   .hero {
     min-height: 550px;
-  }
-
-  .hero__bg {
-    background-position: center center;
   }
 
   .hero__arrow {
@@ -266,58 +119,78 @@
     font-size: 19px;
   }
 
-  .hero__arrow--prev {
-    left: 18px;
-  }
-
-  .hero__arrow--next {
-    right: 18px;
-  }
+  .hero__arrow--prev { left: 18px; }
+  .hero__arrow--next { right: 18px; }
 }
 
 /* =========================================
-   MOBILE RESPONSIVE
+   MOBILE (up to 640px) — FULL SCREEN COVER
 ========================================= */
-
 @media (max-width: 640px) {
-
   .hero {
-    width: 100vw;
-
+    height: 100vh;
     height: 100svh;
     min-height: 480px;
-
-    left: 50%;
-    margin-left: -50vw;
   }
 
   .hero__bg {
     background-size: cover;
     background-position: center center;
-  }
-
-  .hero__slide.is-active .hero__bg {
-    transform: scale(1.01);
+    background-repeat: no-repeat;
   }
 
   .hero__arrow {
     width: 40px;
     height: 40px;
-
     font-size: 16px;
   }
 
-  .hero__arrow--prev {
-    left: 12px;
+  .hero__arrow--prev { left: 12px; }
+  .hero__arrow--next { right: 12px; }
+}
+
+/* =========================================
+   SMALL MOBILE (up to 380px)
+========================================= */
+@media (max-width: 380px) {
+  .hero__arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
   }
 
-  .hero__arrow--next {
-    right: 12px;
+  .hero__arrow--prev { left: 8px; }
+  .hero__arrow--next { right: 8px; }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+@media (prefers-reduced-motion: reduce) {
+  .hero__slide,
+  .hero__bg,
+  .hero__arrow {
+    transition: none;
   }
 }
 
-/* SMALL MOBILE */
-@media (max-width: 380px) {
+/* =========================================
+   MOBILE ONLY — HERO HEIGHT KAM
+   Paste at the VERY END. Desktop unchanged.
+========================================= */
+@media (max-width: 640px) {
+
+  .hero {
+    height: 60vh;        /* fallback */
+    height: 60svh;       /* yahan se height adjust karo */
+    min-height: 320px;
+  }
+
+  .hero__bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 
   .hero__arrow {
     width: 36px;
@@ -325,28 +198,6 @@
     font-size: 15px;
   }
 
-  .hero__arrow--prev {
-    left: 8px;
-  }
-
-  .hero__arrow--next {
-    right: 8px;
-  }
-}
-
-/* =========================================
-   REDUCED MOTION
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .hero__slide,
-  .hero__bg,
-  .hero__arrow {
-    transition: none;
-  }
-
-  .hero__slide.is-active .hero__bg {
-    transform: none;
-  }
+  .hero__arrow--prev { left: 8px; }
+  .hero__arrow--next { right: 8px; }
 }
