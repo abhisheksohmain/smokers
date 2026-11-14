@@ -1,5 +1,5 @@
 
-import video from '../../assets/images/video1.mp4';
+import video from '../../assets/images/video2.mp4';
 import './Welcome.css';
 
 const stats = [

@@ -1,9 +1,9 @@
-import hookahDetail from '../assets/images/01.png';
-import coalsBowl from '../assets/images/02.png';
-import hookahRed from '../assets/images/03.png';
-import torchLight from '../assets/images/04.png';
-import streetSign from '../assets/images/street-sign.jpg';
-import lounge from '../assets/images/04.png';
+import hookahDetail from '../assets/images/1.png';
+import coalsBowl from '../assets/images/4.png';
+import hookahRed from '../assets/images/3.png';
+import torchLight from '../assets/images/2.png';
+import streetSign from '../assets/images/street-sign.png';
+import lounge from '../assets/images/4.png';
 import logo from '../assets/images/logo.png';
 
 // ---------- EDIT YOUR BUSINESS DETAILS HERE ----------
